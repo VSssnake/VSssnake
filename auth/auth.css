@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header button {
+    position: absolute;
+    right: 5px;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.auth-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.auth-container {
+    width: 300px;
+}
+
+label, input {
+    padding: 5px;
+    margin: 5px;
+}
+
+button {
+    margin: 10px;
+    padding: 5px;
+}
