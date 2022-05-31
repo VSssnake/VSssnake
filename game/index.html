@@ -10,12 +10,23 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <title>GamePage</title>
 </head>
+
 <body>
     <header>
-        <button id="logout" class="logout">logout</button>
+        <button id="logout" class="nav">logout</button>
+        <!-- <button id="delete-data" class="nav">Delete player data</button> -->
+        <button id="home" class="nav">Home</button>
+        
+        
     </header>
     <h1>welcome to snake</h1>
 
+    <label>
+        Username:
+        <input type="text" name="username-input" id="username-input">
+    </label>
+    <button id="save" class="nav">Save score</button>
+    
     <script type="module" src="game.js"></script>
 </body>
 </html>

@@ -17,11 +17,12 @@ header {
     justify-content: center;
 }
 
-header button {
+/* header button {
     position: absolute;
     right: 5px;
-}
+} */
 
 button {
     font-family: 'Press Start 2P', cursive;
+    color: black;
 }
