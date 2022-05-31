@@ -1,34 +1,19 @@
-import { redirectIfLoggedIn, signInUser, signupUser } from './fetch-utils.js';
+import { getScores } from './fetch-utils.js';
+import { renderScore } from './render-utils.js';
 
-const signInForm = document.getElementById('sign-in');
-const signInEmail = document.getElementById('sign-in-email');
-const signInPassword = document.getElementById('sign-in-password');
+console.log('hello from app.js');
 
-const signUpForm = document.getElementById('sign-up');
-const signUpEmail = document.getElementById('sign-up-email');
-const signUpPassword = document.getElementById('sign-up-password');
+async function displayScores(){
+    const highScoreEl = document.getElementById('scores');
 
-// if user currently logged in, redirect
-redirectIfLoggedIn();
+    const scores = await getScores();
 
-signUpForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const user = await signupUser(signUpEmail.value, signUpPassword.value);
+    for (let score of scores) {
+        const scoreOutput = renderScore(score);
+        highScoreEl.append(scoreOutput);
 
-    if (user) {
-        redirectIfLoggedIn();
-    } else {
-        console.error(user);
+        console.log(scores);
     }
-});
+}
 
-signInForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const user = await signInUser(signInEmail.value, signInPassword.value);
-
-    if (user) {
-        redirectIfLoggedIn();
-    } else {
-        console.error(user);
-    }
-});
+displayScores();

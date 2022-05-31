@@ -1,35 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Bangers&family=Chicle&family=Comfortaa:wght@300&family=Great+Vibes&family=IM+Fell+French+Canon&family=IM+Fell+French+Canon+SC&family=Inconsolata:wght@200&family=Irish+Grover&family=Josefin+Sans&family=Karla&family=Limelight&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:wght@400;700&family=Nixie+One&family=Oswald&family=Philosopher:wght@400;700&family=Poiret+One&family=Press+Start+2P&family=Raleway:wght@100&family=Roboto+Mono:wght@100&family=Slabo+27px&family=Space+Mono&family=Spectral&family=Tenor+Sans&family=Ultra&family=Unica+One&family=VT323&family=Varela+Round&family=Yeseva+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/home.css">
-    <title>Highscore Page</title>
+    <link rel="stylesheet" href="./game.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <title>GamePage</title>
 </head>
-
 <body>
     <header>
-        <h1>VSSSNAKE</h1>
-        <button>created <br> by...</button>
+        <button id="logout" class="logout">logout</button>
     </header>
-    <section id="main-section">
-        <h2>high scores</h2>
-        <div id="scores">
-            <!-- <div class="highscore">
-                <h4>dangerNoodle</h4>
-                <p>120045882</p>
-            </div> -->
-        </div>
-        <button id="token" class="token">insert token</button>
-    </section>
-    
-    <script type="module" src="./app.js"></script>
-</body>
+    <h1>welcome to snake</h1>
 
+    <script type="module" src="game.js"></script>
+</body>
 </html>
