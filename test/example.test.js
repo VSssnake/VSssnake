@@ -24,7 +24,7 @@ test('time renderScore()', (expect) => {
     const expected = `<div class="highscore"><h4>dangerNoodle</h4><p>120045882</p></div>`;
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderScore({ user_name: 'dangerNoodle', high_score: '120045882' });
+    const actual = renderScore({ user_name: 'dangerNoodle', user_score: '120045882' });
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);

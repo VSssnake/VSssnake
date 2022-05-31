@@ -37,6 +37,15 @@ export async function logout() {
     return (window.location.href = '/');
 }
 
+export async function getScores() {
+    const response = await client
+        .from('high_scores')
+        .select('*')
+        .order('user_score', { ascending: false });
+
+    return response.data;
+}
+
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }
