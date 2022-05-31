@@ -55,6 +55,14 @@ export async function removeData(id) {
     return checkError(response);
 }
 
+export async function createPlayerData(playerData) {
+    const response = await client
+        .from('high_scores')
+        .insert(playerData);
+    console.log(response);
+    return checkError(response.data);
+}
+
 function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
