@@ -26,3 +26,15 @@ button {
     font-family: 'Press Start 2P', cursive;
     color: black;
 }
+
+.contributors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contributors div {
+    border: 2px solid chartreuse;
+    margin: 10px;
+    padding: 10px;
+}
