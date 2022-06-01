@@ -31,8 +31,8 @@ formEl.addEventListener('submit', async (e) => {
 });
 
 function startGame() {
-    document.addEventListener('keydown', event => {
-        event.preventDefault();
+    document.addEventListener('keydown', (event) => {
+        // event.preventDefault();
         //verify correct answer
         if (currentState === 1 && event.metaKey && event.code === 'KeyX'){
         //alert user if correct
