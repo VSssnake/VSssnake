@@ -45,7 +45,7 @@
     
         <div id="game-div">
             <h3>THE GAME WILL GO HERE</h3>
-            <p>prompt 1: on your keyboard, enter the command to cut a whole line in VsCode</p>
+            <p id="promptEl">prompt 1: on your keyboard, enter the shortcut to cut a whole line in VsCode</p>
             <img src="../assets/snake.png" alt="a cute green snake" width="300px">
         </div>
         <div id="score">
@@ -54,20 +54,13 @@
     </section>
 
 
-    <form id="form">
+    <form id="form">   
         <label>
             Username:
-            <input type="text" name="username-input" id="username-input">
         </label>
-        <label> test 
-            <input type="number" name="test">
-        </label>
-        <!-- this is a test input for our save score function -->
+        <input type="text" name="username-input" id="username-input">
         <button id="save" class="nav">Save score</button>
     </form>
-
-
-    
     <script type="module" src="game.js"></script>
 </body>
 </html>
