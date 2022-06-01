@@ -32,37 +32,40 @@ formEl.addEventListener('submit', async (e) => {
 
 function startGame() {
     document.addEventListener('keydown', (event) => {
-        // event.preventDefault();
         //verify correct answer
         if (currentState === 1 && event.metaKey && event.code === 'KeyX'){
         //alert user if correct
-            alert('you commanded ⌘X to cut a line!');
+            alert('you used ⌘X to cut a line!');
         //update the state
             score++;
         //update the dom view
-            promptEl.textContent = 'prompt 2: on your keyboard, enter the shortcut to paste a whole line in VsCode';
+            promptEl.textContent = 'prompt 2: on your keyboard, enter the shortcut to paste a whole line in VSCode';
             scoreEl.textContent = score;
             currentState++;
         } else if (currentState === 2 && event.metaKey && event.code === 'KeyV'){
-            alert ('you command the paste command!');
+            alert ('you used the paste command!');
             score++;
+            promptEl.textContent = 'prompt 3: on your keyboard, enter the shortcut to move to the beginning of a line in VSCode';
             scoreEl.textContent = score;
-            promptEl.textContent = 'prompt 3: on your keyboard, enter the shortcut to paste a whole line in VsCode';
+            currentState++;
         } else if (currentState === 3 && event.metaKey && event.code === 'ArrowLeft'){
-            alert ('you command the paste command!');
+            event.preventDefault();
+            alert ('you used ⌘← to move to the beginning of a line!');
             score++;
             scoreEl.textContent = score;
-            promptEl.textContent = 'prompt 4: on your keyboard, enter the shortcut to paste a whole line in VsCode';
+            currentState++;
+            promptEl.textContent = 'prompt 4: on your keyboard, enter the shortcut to move to the end of a line in VSCode';
         } else if (currentState === 4 && event.metaKey && event.code === 'ArrowRight'){
-            alert ('you command the paste command!');
+            alert ('you used the ⌘→ shortcut!');
             score++;
             scoreEl.textContent = score;
-            promptEl.textContent = 'prompt 5: on your keyboard, enter the shortcut to paste a whole line in VsCode';
+            currentState++;
+            promptEl.textContent = 'prompt 5: on your keyboard, enter the command to comment out a whole line in VSCode';
         } else if (currentState === 5 && event.metaKey && event.code === 'Slash'){
             alert ('you command the paste command!');
             score++;
             scoreEl.textContent = score;
-            promptEl.textContent = 'prompt 2: on your keyboard, enter the shortcut to paste a whole line in VsCode';
+            promptEl.textContent = 'Congrats, you completed Level 1 (the only level we have!) submit info below to save your game to the scoreboard.';
         } 
         //create brand new if state and do the same if else alert error
     });
