@@ -52,3 +52,5 @@ Basic game page HTML:
 -render function for prompt div
 -on document event handler
 -if user input = answer, state++, alert 'u got it right' else, return alert 'ur wrong'
+
+
