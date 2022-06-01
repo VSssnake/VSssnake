@@ -2,6 +2,20 @@ import { getScores } from './fetch-utils.js';
 import { renderScore } from './render-utils.js';
 
 console.log('hello from app.js');
+const tokenButton = document.getElementById('token');
+const aboutButton = document.getElementById('about');
+
+tokenButton.addEventListener('click', () => {
+    return window.location.href = '/auth';
+
+});
+
+aboutButton.addEventListener('click', () => {
+    return window.location.href = '/about';
+});
+
+
+
 
 async function displayScores(){
     const highScoreEl = document.getElementById('scores');
@@ -15,5 +29,7 @@ async function displayScores(){
         console.log(scores);
     }
 }
+
+
 
 displayScores();

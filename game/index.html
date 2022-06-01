@@ -10,12 +10,57 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <title>GamePage</title>
 </head>
+
 <body>
     <header>
-        <button id="logout" class="logout">logout</button>
+        <button id="logout" class="nav">logout</button>
+        <!-- <button id="delete-data" class="nav">Delete player data</button> -->
+        <button id="home" class="nav">Home</button>
+        
+        
     </header>
     <h1>welcome to snake</h1>
 
+    <section class="main">
+        <div id="welcome-blerb" class="welcome-blerb">
+            <p>You're a snake and you're hungry for knowledge</p>
+        </div>
+        <div id="game-rules" class="game-rules">
+            <h3>Rules</h3>
+            <ul id="rules">
+                <li>rules</li>
+                <li>rules</li>
+                <li>rules</li>
+            </ul>
+        </div>
+        <div id="shortcuts">
+            <h3>CheatSheet</h3>
+            <ul>
+                <li>Cut a whole line: ⌘X</li>
+                <li>shortcut</li>
+                <li>shortcut</li>
+                <li>shortcut</li>
+            </ul>
+        </div>
+    
+        <div id="game-div">
+            <h3>THE GAME WILL GO HERE</h3>
+            <p id="promptEl">prompt 1: on your keyboard, enter the shortcut to cut a whole line in VsCode</p>
+            <img src="../assets/snake.png" alt="a cute green snake" width="300px">
+        </div>
+        <div id="score">
+            <h3>SCORE: <span id="score-count">0</span></h3>
+        </div>
+    </section>
+
+
+    <form id="form">   
+        <label>
+            Username:
+        </label>
+        <input type="text" name="username-input" id="username-input">
+        <button id="save" class="nav">Save score</button>
+    </form>
     <script type="module" src="game.js"></script>
 </body>
 </html>

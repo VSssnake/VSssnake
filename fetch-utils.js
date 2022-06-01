@@ -46,6 +46,23 @@ export async function getScores() {
     return response.data;
 }
 
-// function checkError({ data, error }) {
-//     return error ? console.error(error) : data;
-// }
+export async function removeData(id) {
+    const response = await client
+        .from('high_score')
+        .delete()
+        .eq('id', id);
+
+    return checkError(response);
+}
+
+export async function createPlayerData(playerData) {
+    const response = await client
+        .from('high_scores')
+        .insert(playerData);
+    console.log(response);
+    return checkError(response.data);
+}
+
+function checkError({ data, error }) {
+    return error ? console.error(error) : data;
+}
