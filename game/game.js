@@ -47,7 +47,23 @@ function startGame() {
             alert ('you command the paste command!');
             score++;
             scoreEl.textContent = score;
-        }
+            promptEl.textContent = 'prompt 3: on your keyboard, enter the shortcut to paste a whole line in VsCode';
+        } else if (currentState === 3 && event.metaKey && event.code === 'ArrowLeft'){
+            alert ('you command the paste command!');
+            score++;
+            scoreEl.textContent = score;
+            promptEl.textContent = 'prompt 4: on your keyboard, enter the shortcut to paste a whole line in VsCode';
+        } else if (currentState === 4 && event.metaKey && event.code === 'ArrowRight'){
+            alert ('you command the paste command!');
+            score++;
+            scoreEl.textContent = score;
+            promptEl.textContent = 'prompt 5: on your keyboard, enter the shortcut to paste a whole line in VsCode';
+        } else if (currentState === 5 && event.metaKey && event.code === 'Slash'){
+            alert ('you command the paste command!');
+            score++;
+            scoreEl.textContent = score;
+            promptEl.textContent = 'prompt 2: on your keyboard, enter the shortcut to paste a whole line in VsCode';
+        } 
         //create brand new if state and do the same if else alert error
     });
 }
