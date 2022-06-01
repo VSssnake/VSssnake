@@ -24,3 +24,31 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+
+-supabase setup 
+-connect client 
+-validate authentificaton and redirect()
+-create all pages 
+
+
+To do for game page:
+-Set up page pathways.
+-Set up buttons: Log out, Delete user, save game, score board (home).
+-Set up another supabase table with 5 VS Code commands.
+-
+
+Basic game page HTML:
+-Welcome message
+-Rules section
+-Shortcut cheat sheet
+-Score div
+-Game screen div
+-Image place holder
+-
+
+-grab score-counter 
+-let state
+-render function for prompt div
+-on document event handler
+-if user input = answer, state++, alert 'u got it right' else, return alert 'ur wrong'

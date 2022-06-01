@@ -1,34 +1,39 @@
-import { redirectIfLoggedIn, signInUser, signupUser } from './fetch-utils.js';
+import { getScores } from './fetch-utils.js';
+import { renderScore } from './render-utils.js';
 
-const signInForm = document.getElementById('sign-in');
-const signInEmail = document.getElementById('sign-in-email');
-const signInPassword = document.getElementById('sign-in-password');
+const tokenButton = document.getElementById('token');
+const aboutButton = document.getElementById('about');
 
-const signUpForm = document.getElementById('sign-up');
-const signUpEmail = document.getElementById('sign-up-email');
-const signUpPassword = document.getElementById('sign-up-password');
+tokenButton.addEventListener('click', () => {
+    return window.location.href = '/auth';
 
-// if user currently logged in, redirect
-redirectIfLoggedIn();
-
-signUpForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const user = await signupUser(signUpEmail.value, signUpPassword.value);
-
-    if (user) {
-        redirectIfLoggedIn();
-    } else {
-        console.error(user);
-    }
 });
 
-signInForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const user = await signInUser(signInEmail.value, signInPassword.value);
-
-    if (user) {
-        redirectIfLoggedIn();
-    } else {
-        console.error(user);
-    }
+aboutButton.addEventListener('click', () => {
+    return window.location.href = '/about';
 });
+
+
+
+
+async function displayScores(){
+    const highScoreEl = document.getElementById('scores');
+
+    const scores = await getScores();
+
+    for (let score of scores) {
+        const scoreOutput = renderScore(score);
+        highScoreEl.append(scoreOutput);
+    }
+}
+
+displayScores();
+
+function findOS(){
+    if (navigator.userAgentData.platform === 'macOS'){
+        console.log('this is a MacOS');
+    } else {
+        (navigator.userAgentData.platform === 'Windows');
+    } console.log('this is a Windows');
+}
+findOS();
