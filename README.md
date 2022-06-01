@@ -46,3 +46,9 @@ Basic game page HTML:
 -Game screen div
 -Image place holder
 -
+
+-grab score-counter 
+-let state
+-render function for prompt div
+-on document event handler
+-if user input = answer, state++, alert 'u got it right' else, return alert 'ur wrong'

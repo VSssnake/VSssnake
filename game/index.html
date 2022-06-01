@@ -21,6 +21,38 @@
     </header>
     <h1>welcome to snake</h1>
 
+    <section class="main">
+        <div id="welcome-blerb" class="welcome-blerb">
+            <p>You're a snake and you're hungry for knowledge</p>
+        </div>
+        <div id="game-rules" class="game-rules">
+            <h3>Rules</h3>
+            <ul id="rules">
+                <li>rules</li>
+                <li>rules</li>
+                <li>rules</li>
+            </ul>
+        </div>
+        <div id="shortcuts">
+            <h3>CheatSheet</h3>
+            <ul>
+                <li>shortcut</li>
+                <li>shortcut</li>
+                <li>shortcut</li>
+                <li>shortcut</li>
+            </ul>
+        </div>
+    
+        <div id="game-div">
+            <h3>THE GAME WILL GO HERE</h3>
+            <img src="../assets/snake.png" alt="a cute green snake" width="300px">
+        </div>
+        <div id="score">
+            <h3>SCORE: <span id="score-count">0</span></h3>
+        </div>
+    </section>
+
+
     <form id="form">
         <label>
             Username:
@@ -29,8 +61,11 @@
         <label> test 
             <input type="number" name="test">
         </label>
+        <!-- this is a test input for our save score function -->
         <button id="save" class="nav">Save score</button>
     </form>
+
+
     
     <script type="module" src="game.js"></script>
 </body>
