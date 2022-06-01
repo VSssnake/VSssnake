@@ -28,3 +28,12 @@ async function displayScores(){
 }
 
 displayScores();
+
+function findOS(){
+    if (navigator.userAgentData.platform === 'macOS'){
+        console.log('this is a MacOS');
+    } else {
+        (navigator.userAgentData.platform === 'Windows');
+    } console.log('this is a Windows');
+}
+findOS();

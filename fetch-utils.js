@@ -66,3 +66,4 @@ export async function createPlayerData(playerData) {
 function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
+
