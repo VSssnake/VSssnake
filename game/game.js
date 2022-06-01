@@ -35,14 +35,10 @@ let score = 0;
 function startGame() {
     document.addEventListener('keydown', event => {
         if (event.metaKey && event.code === 'KeyX') {
-            alert("you commanded ⌘X to cut a line!");
-            scoreEl.textContent = score;
-            score++;
-        } else {
-            alert('try again you worm');
+            alert('you commanded ⌘X to cut a line!');
         }
-    });
-    
+    });    
 }
 
 startGame();
+
