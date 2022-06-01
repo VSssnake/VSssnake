@@ -23,32 +23,47 @@ formEl.addEventListener('submit', async (e) => {
     await createPlayerData({ user_name: form.get('username-input'), user_score: form.get('test') });
 });
 
-// -render function for prompt div
-// -on document event handler
-// -if user input = answer, state++, alert 'u got it right' else, return alert 'ur wrong'
 
-// -let state
 let score = 0;
 
 
 function startGame() {
     document.addEventListener('keydown', event => {
         //verify correct answer
-        event.metaKey && event.code === 'KeyX';
-        //alert user if correct
-        alert('you commanded ⌘X to cut a line!');
+        if (event.metaKey && event.code === 'KeyX'){
+                    //alert user if correct
+            alert('you commanded ⌘X to cut a line!');
         //update the state
-        score++;
+            score++;
         //update the dom view
-        scoreEl.textContent = score;
-        //validate in console
-        console.log(score);
+            scoreEl.textContent = score;
+        }
+        //create brand new if state and do the same if else alert error
     });
 }
-
 startGame();
 
 // saveGame();
 //grab score + username
 //push to supabase 
 //redirect to home 
+
+
+//this is the function we were working on with TAS
+
+// function startGame() {
+//     document.addEventListener('keydown', event => {
+//         //verify correct answer
+//         if (event.metaKey && event.code === 'KeyX'){
+//                     //alert user if correct
+//             alert('you commanded ⌘X to cut a line!');
+//         //update the state
+//             score++;
+//         //update the dom view
+//             scoreEl.textContent = score;
+//         } else {
+//             alert('wronk!');
+//         }
+//         //create brand new if state and do the same if else alert error
+//     });
+//}
