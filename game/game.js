@@ -30,7 +30,7 @@ formEl.addEventListener('submit', async (e) => {
     window.location.href = '/';
 });
 
-function startGame() {
+function startGameMac() {
     document.addEventListener('keydown', (event) => {
         //verify correct answer
         if (currentState === 1 && event.metaKey && event.code === 'KeyX'){
@@ -72,7 +72,15 @@ function startGame() {
 }
 
 //do a click event listener for the end of the game to toggle startGame()?
-startGame();
+function findOS(){
+    if (navigator.userAgentData.platform === 'macOS'){
+        startGameMac();
+        return console.log('this is a MacOS');
+    } else console.log('this is a Windows');
+} 
+
+findOS();
+// startGameMac();
 
 // if (inputEl.addEventListener('click', () => {
 //     return;
