@@ -52,3 +52,21 @@ Basic game page HTML:
 -render function for prompt div
 -on document event handler
 -if user input = answer, state++, alert 'u got it right' else, return alert 'ur wrong'
+
+-Amaya-
+Amaya, she/they, is a web engineer living in SE Portland. They are obsessed with cute critters, bees and hummingbirds alike! Find Amaya tending to her patio garden in hopes of recruiting the good bugs to help the hummingbirdsss find their next meal.
+favorite arcade
+game: Cruisin USA
+-Kashi-
+kashi tamang (they/them) is a software engineer in portland oregon whos favorite original video game is Buck Hunter.
+-Kat-
+KAT, SHE/HER, IS A SOFTWARE ENGINEER IN PROGRESS BASED IN PORTLAND, OR WHO HAS FOND MEMORIES OF PLAYING THE GAME SNAKE ON HER DAD’S NOKIA CELLPHONE IN THE LATE NINETIES. HER FAVORITE VIDEO GAME IS MARIO KART ON N64. SHE LOVES LEARNING, CATS, EATING COCKTAIL ONIONS OUT OF THE JAR, AND ABOVE ALL, SHORTCUTS.
+-Sebastian-
+Sebastian
+Snake Name: superSnake
+I'm a software developer in progress from Portland, OR. I use he/him pronouns. My favorite snakes include but are not limited to, Pythons, Rattlesnakes and Garter snakes.
+My favorite arcade game is space invaders.
+-Pedro-
+PythonPedro-
+new python Pedro wanted to learn VS Code shortcuts, so he slithered through the tall grass in here to learn.
+Favorite game: Crazy taxi
