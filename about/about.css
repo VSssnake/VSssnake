@@ -19,16 +19,30 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 200px;
 }
 
-header button {
-    position: absolute;
-    right: 5px;
-}
 
 button {
     font-family: 'Press Start 2P', cursive;
     color: black;
+}
+
+header button {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 1.2rem;
+    padding: 10px;
+    background-image: linear-gradient(150deg, rgb(252, 105, 0), rgb(255, 221, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    border: 2px solid orange;
+}
+
+header button:hover {
+    cursor: pointer;
+    opacity: .6;
 }
 
 .contributors {
@@ -51,8 +65,16 @@ button {
     font-family: 'Space Mono', monospace;
 }
 
-h3{
+h3 {
     font-size: .75em;
     color: chartreuse;
     line-height: 1.3em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    letter-spacing: 4px;
+    color: rgb(195, 255, 0);
+    text-shadow: 4px 4px 1px rgb(0, 0, 0), 6px 6px 1px rgb(3, 134, 40), 7px 7px 1px rgb(60, 245, 32), 8px 8px 3px black, 5px 5px 15px rgb(217, 255, 0), 1px 1px 15px rgb(2, 165, 2);
 }
