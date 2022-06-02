@@ -6,6 +6,7 @@ body {
     background-color: black;
     font-family: 'Press Start 2P', cursive;
     color: white;
+    
 }
 
 header {
@@ -13,20 +14,21 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5em;
-    height: 200px;
+    margin-bottom: 3em;
+    height: 150px;
 }
 
 header button {
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 13px;
+    top: 13px;
     font-size: 1.2rem;
-    padding: 10px;
+    padding: 5px;
     background-image: linear-gradient(150deg, rgb(252, 105, 0), rgb(255, 221, 0));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     border: 2px solid orange;
+    border-radius: 3px;
 }
 
 header button:hover {
@@ -64,6 +66,7 @@ button {
     flex-direction: column;
     align-items: center;
     margin: 20px;
+    margin-bottom: 100px;
 }
 
 #scores {
@@ -96,8 +99,9 @@ button {
     font-size: 2.7rem;
     text-transform: uppercase;
     width: 550px;
-    margin-top: 100px;
+    margin-top: 75px;
     transition: transform 1.5s ease-in-out;
+    margin-bottom: 150px;
 }
 
 .token:hover {
@@ -105,5 +109,6 @@ button {
     opacity: .5;
     transform: rotateY(360deg);
 }
+
 
 /* kill me */
