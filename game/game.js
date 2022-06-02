@@ -14,6 +14,11 @@ const boxTwo = document.getElementById('box-two');
 const boxThree = document.getElementById('box-three');
 const boxFour = document.getElementById('box-four');
 const boxFive = document.getElementById('box-five');
+const loadAudio = new Audio ('/assets/load.mp3');
+
+window.addEventListener('load', () => {
+    loadAudio.play();
+});
 
 logoutButton.addEventListener('click', async () => {
     await logout();

@@ -3,6 +3,11 @@ import { renderScore } from './render-utils.js';
 
 const tokenButton = document.getElementById('token');
 const aboutButton = document.getElementById('about');
+const loadAudio = new Audio ('/assets/load.mp3');
+
+window.addEventListener('load', () => {
+    loadAudio.play();
+});
 
 tokenButton.addEventListener('click', () => {
     return window.location.href = '/auth';
