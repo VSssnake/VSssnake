@@ -30,3 +30,31 @@ button {
 input {
     color: black;
 }
+
+.main {
+    display: grid;
+    height: 75vh;
+    grid-template-columns: 10fr 60fr 5fr 15fr 10fr;
+    grid-template-rows: 15fr 75fr 10fr;
+    
+}
+
+#welcome-blerb {
+    grid-column: 2 / span 3;
+    grid-row: 1;
+}
+
+#game-div {
+    grid-column: 2 / span 1;
+    grid-row: 2;
+}
+
+#shortcuts {
+    grid-column: 4 / span 1;
+    grid-row: 2;
+}
+
+#form {
+    grid-column: 2 / span 3;
+    grid-row: 3;
+}
