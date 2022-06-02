@@ -15,6 +15,8 @@ const boxThree = document.getElementById('box-three');
 const boxFour = document.getElementById('box-four');
 const boxFive = document.getElementById('box-five');
 const loadAudio = new Audio ('/assets/load.mp3');
+const correctAudio = new Audio ('/assets/correct.mp3');
+const tadaAudio = new Audio ('/assets/tada.WAV');
 
 window.addEventListener('load', () => {
     loadAudio.play();
@@ -50,14 +52,19 @@ formEl.addEventListener('submit', async (e) => {
 function batteryLevel() {
     if (score === 1) {
         boxOne.classList.remove('hidden');
+        correctAudio.play();
     } else if (score === 2) {
         boxTwo.classList.remove('hidden');
+        correctAudio.play();
     } else if (score === 3) {
         boxThree.classList.remove('hidden');
+        correctAudio.play();
     } else if (score === 4) {
         boxFour.classList.remove('hidden');
+        correctAudio.play();
     } else if (score === 5) {
         boxFive.classList.remove('hidden');
+        tadaAudio.play();
     }
 }
 console.log(score);
