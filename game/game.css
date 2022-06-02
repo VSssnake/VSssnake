@@ -6,6 +6,7 @@ body {
 * {
     font-family: 'Press Start 2P', cursive;
     color: white;
+    text-transform: uppercase;
 }
 
 
@@ -42,19 +43,41 @@ input {
 #welcome-blerb {
     grid-column: 2 / span 3;
     grid-row: 1;
+    border: 3px solid chartreuse;
+    border-radius: 5px;
+    padding: 20px;
+    font-family: 'Space Mono', monospace;
+    margin: 20px;
+}
+
+#welcome-blerb p {
+    font-family: 'Space Mono', monospace;
 }
 
 #game-div {
     grid-column: 2 / span 1;
     grid-row: 2;
+    border: 3px solid chartreuse;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
 }
 
 #shortcuts {
     grid-column: 4 / span 1;
     grid-row: 2;
+    font-family: 'Space Mono', monospace;
+    border: 3px solid chartreuse;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
 }
 
 #form {
     grid-column: 2 / span 3;
     grid-row: 3;
+    border: 3px solid chartreuse;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
 }
