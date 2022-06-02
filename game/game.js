@@ -107,7 +107,7 @@ function startGameWindows() {
             score++;
             scoreEl.textContent = score;
             promptEl.textContent = 'Congrats, you completed Level 1 (the only level we have!) submit info below to save your game to the scoreboard.';
-        } 
+        }
         //create brand new if state and do the same if else alert error
     });
 }
