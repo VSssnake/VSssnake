@@ -26,6 +26,8 @@ button {
     /* height: 75vh; */
     grid-template-columns: 10fr 60fr 5fr 15fr 10fr;
     grid-template-rows: 490px 600px 10fr;
+    min-width: 1100px;
+    max-width: 1700px;
 }
 
 #welcome-blerb {
