@@ -1,4 +1,4 @@
-import { logout, createPlayerData } from '../fetch-utils.js';
+import { logout, createPlayerData, checkAuth } from '../fetch-utils.js';
 
 const logoutButton = document.getElementById('logout');
 // const deleteAccount = document.getElementById('delete-data');
@@ -6,16 +6,18 @@ const formEl = document.getElementById('form');
 //  -grab score-counter 
 const scoreEl = document.getElementById('score-count');
 const promptEl = document.getElementById('promptEl');
+const homeButton = document.getElementById('home');
 // const inputEl = document.getElementById('username-input');
 
 logoutButton.addEventListener('click', async () => {
     await logout();
 });
 
-// deleteAccount.addEventListener('click', async () => {
-//     await removeData();
+homeButton.addEventListener('click', () => {
+    window.location.href = '/';
+});
 
-// });
+checkAuth();
 
 
 let score = 0;
@@ -62,7 +64,7 @@ function startGameMac() {
             currentState++;
             promptEl.textContent = 'prompt 5: on your keyboard, enter the command to comment out a whole line in VSCode';
         } else if (currentState === 5 && event.metaKey && event.code === 'Slash'){
-            alert ('you command the paste command!');
+            alert ('you used the paste shortcut!');
             score++;
             scoreEl.textContent = score;
             promptEl.textContent = 'Congrats, you completed Level 1 (the only level we have!) submit info below to save your game to the scoreboard.';
@@ -91,19 +93,19 @@ function startGameWindows() {
             currentState++;
         } else if (currentState === 3 && event.ctrlKey && event.code === 'ArrowLeft'){
             event.preventDefault();
-            alert ('you used ⌘← to move to the beginning of a line!');
+            alert ('you used Ctrl← to move to the beginning of a line!');
             score++;
             scoreEl.textContent = score;
             currentState++;
             promptEl.textContent = 'prompt 4: on your keyboard, enter the shortcut to move to the end of a line in VSCode';
         } else if (currentState === 4 && event.ctrlKey && event.code === 'ArrowRight'){
-            alert ('you used the ⌘→ shortcut!');
+            alert ('you used the Ctrl→ shortcut!');
             score++;
             scoreEl.textContent = score;
             currentState++;
             promptEl.textContent = 'prompt 5: on your keyboard, enter the command to comment out a whole line in VSCode';
         } else if (currentState === 5 && event.ctrlKey && event.code === 'Slash'){
-            alert ('you command the paste command!');
+            alert ('you used the paste shortcut!');
             score++;
             scoreEl.textContent = score;
             promptEl.textContent = 'Congrats, you completed Level 1 (the only level we have!) submit info below to save your game to the scoreboard.';
