@@ -7,9 +7,14 @@ const signInPassword = document.getElementById('sign-in-password');
 const signUpForm = document.getElementById('sign-up');
 const signUpEmail = document.getElementById('sign-up-email');
 const signUpPassword = document.getElementById('sign-up-password');
+const logoutAudio = new Audio ('/assets/logout.mp3');
 
 // if user currently logged in, redirect
 redirectIfLoggedIn();
+
+window.addEventListener('load', () => {
+    logoutAudio.play();
+});
 
 signUpForm.addEventListener('submit', async (event) => {
     event.preventDefault();
