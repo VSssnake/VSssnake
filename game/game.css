@@ -1,6 +1,7 @@
 body {
     background-color: black;
     color: white;
+    
 }
 
 * {
@@ -37,7 +38,6 @@ input {
     height: 75vh;
     grid-template-columns: 10fr 60fr 5fr 15fr 10fr;
     grid-template-rows: 15fr 75fr 10fr;
-    
 }
 
 #welcome-blerb {
@@ -50,8 +50,10 @@ input {
     margin: 20px;
 }
 
-#welcome-blerb p {
+#welcome-blerb p, li {
     font-family: 'Space Mono', monospace;
+    color: rgb(225, 255, 0);
+    margin: 15px;
 }
 
 #game-div {
@@ -80,4 +82,67 @@ input {
     border-radius: 5px;
     margin: 20px;
     padding: 20px;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 50px;
+}
+
+#promptEl {
+    color: white;
+    line-height: 25px;
+    text-shadow: 1px 1px 4px rgb(225, 255, 0);
+}
+
+#score-count {
+    background-image: linear-gradient(150deg, rgb(252, 105, 0), rgb(255, 221, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#score h3 {
+    font-size: 2em;
+}
+
+ol li {
+    margin: 15px;
+}
+
+.nav {
+    margin: 20px;
+    font-size: 1.2rem;
+    padding: 10px;
+    background-image: linear-gradient(150deg, rgb(252, 105, 0), rgb(255, 221, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    border: 2px solid orange;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: .6;
+}
+
+input {
+    color: chartreuse;
+    background-color: black;
+    border: 2px solid chartreuse;
+    padding: 5px;
+}
+
+#snake-move {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid chartreuse;
+    width: 150px;
+    height: 35px;
+}
+
+#snake-move div {
+    background-color: chartreuse;
+    margin: 2px;
+    height: 30px;
+    width: 30px;
+}
+
+.hidden {
+    display: none;
 }
