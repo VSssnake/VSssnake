@@ -120,3 +120,29 @@ button:hover {
     cursor: pointer;
     opacity: .6;
 }
+
+input {
+    color: chartreuse;
+    background-color: black;
+    border: 2px solid chartreuse;
+    padding: 5px;
+}
+
+#snake-move {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid chartreuse;
+    width: 150px;
+    height: 35px;
+}
+
+#snake-move div {
+    background-color: chartreuse;
+    margin: 2px;
+    height: 30px;
+    width: 30px;
+}
+
+.hidden {
+    display: none;
+}

@@ -9,6 +9,12 @@ const promptEl = document.getElementById('promptEl');
 const homeButton = document.getElementById('home');
 // const inputEl = document.getElementById('username-input');
 
+const boxOne = document.getElementById('box-one');
+const boxTwo = document.getElementById('box-two');
+const boxThree = document.getElementById('box-three');
+const boxFour = document.getElementById('box-four');
+const boxFive = document.getElementById('box-five');
+
 logoutButton.addEventListener('click', async () => {
     await logout();
 });
@@ -27,10 +33,31 @@ let currentState = 1;
 formEl.addEventListener('submit', async (e) => {
     e.preventDefault();
     const form = new FormData(formEl);
+    if (score > 0) {
+        await createPlayerData({ user_name: form.get('username-input'), user_score: score });
+        window.location.href = '/';
+    } else {
+        alert('you need to ssscore pointsss');
+    }
     // this includes a test input
-    await createPlayerData({ user_name: form.get('username-input'), user_score: score });
-    window.location.href = '/';
 });
+
+function batteryLevel() {
+    if (score === 1) {
+        boxOne.classList.remove('hidden');
+    } else if (score === 2) {
+        boxTwo.classList.remove('hidden');
+    } else if (score === 3) {
+        boxThree.classList.remove('hidden');
+    } else if (score === 4) {
+        boxFour.classList.remove('hidden');
+    } else if (score === 5) {
+        boxFive.classList.remove('hidden');
+    }
+}
+console.log(score);
+
+batteryLevel();
 
 function startGameMac() {
     document.addEventListener('keydown', (event) => {
@@ -40,32 +67,37 @@ function startGameMac() {
             alert('you used ⌘X to cut a line!');
         //update the state
             score++;
+            batteryLevel();
         //update the dom view
-            promptEl.textContent = 'prompt 2: on your keyboard, enter the shortcut to paste a whole line in VSCode';
+            promptEl.textContent = 'enter the shortcut to paste a whole line';
             scoreEl.textContent = score;
             currentState++;
         } else if (currentState === 2 && event.metaKey && event.code === 'KeyV'){
             alert ('you used the paste command!');
             score++;
-            promptEl.textContent = 'prompt 3: on your keyboard, enter the shortcut to move to the beginning of a line in VSCode';
+            batteryLevel();
+            promptEl.textContent = 'enter the shortcut to move to the beginning of a line';
             scoreEl.textContent = score;
             currentState++;
         } else if (currentState === 3 && event.metaKey && event.code === 'ArrowLeft'){
             event.preventDefault();
             alert ('you used ⌘← to move to the beginning of a line!');
             score++;
+            batteryLevel();
             scoreEl.textContent = score;
             currentState++;
-            promptEl.textContent = 'prompt 4: on your keyboard, enter the shortcut to move to the end of a line in VSCode';
+            promptEl.textContent = 'enter the shortcut to move to the end of a line';
         } else if (currentState === 4 && event.metaKey && event.code === 'ArrowRight'){
             alert ('you used the ⌘→ shortcut!');
             score++;
+            batteryLevel();
             scoreEl.textContent = score;
             currentState++;
-            promptEl.textContent = 'prompt 5: on your keyboard, enter the command to comment out a whole line in VSCode';
+            promptEl.textContent = 'enter the shortcut to comment out a whole line';
         } else if (currentState === 5 && event.metaKey && event.code === 'Slash'){
-            alert ('you used the paste shortcut!');
+            alert ('you used the shortcut to comment out a line!');
             score++;
+            batteryLevel();
             scoreEl.textContent = score;
             promptEl.textContent = 'Congrats, you completed Level 1 (the only level we have!) submit info below to save your game to the scoreboard.';
         } 
@@ -81,32 +113,37 @@ function startGameWindows() {
             alert('you used CTRL X to cut a line!');
         //update the state
             score++;
+            batteryLevel();
         //update the dom view
-            promptEl.textContent = 'prompt 2: on your keyboard, enter the shortcut to paste a whole line in VSCode';
+            promptEl.textContent = 'enter the shortcut to paste a whole line';
             scoreEl.textContent = score;
             currentState++;
         } else if (currentState === 2 && event.ctrlKey && event.code === 'KeyV'){
             alert ('you used the paste command!');
             score++;
-            promptEl.textContent = 'prompt 3: on your keyboard, enter the shortcut to move to the beginning of a line in VSCode';
+            batteryLevel();
+            promptEl.textContent = 'enter the shortcut to move to the beginning of a line';
             scoreEl.textContent = score;
             currentState++;
         } else if (currentState === 3 && event.ctrlKey && event.code === 'ArrowLeft'){
             event.preventDefault();
             alert ('you used Ctrl← to move to the beginning of a line!');
             score++;
+            batteryLevel();
             scoreEl.textContent = score;
             currentState++;
-            promptEl.textContent = 'prompt 4: on your keyboard, enter the shortcut to move to the end of a line in VSCode';
+            promptEl.textContent = 'enter the shortcut to move to the end of a line';
         } else if (currentState === 4 && event.ctrlKey && event.code === 'ArrowRight'){
             alert ('you used the Ctrl→ shortcut!');
             score++;
+            batteryLevel();
             scoreEl.textContent = score;
             currentState++;
-            promptEl.textContent = 'prompt 5: on your keyboard, enter the command to comment out a whole line in VSCode';
+            promptEl.textContent = 'enter the shortcut to comment out a whole line';
         } else if (currentState === 5 && event.ctrlKey && event.code === 'Slash'){
-            alert ('you used the paste shortcut!');
+            alert ('you used the shortcut to comment out a line!');
             score++;
+            batteryLevel();
             scoreEl.textContent = score;
             promptEl.textContent = 'Congrats, you completed Level 1 (the only level we have!) submit info below to save your game to the scoreboard.';
         }
@@ -124,8 +161,3 @@ function findOS(){
 } 
 
 findOS();
-// startGameMac();
-
-// if (inputEl.addEventListener('click', () => {
-//     return;
-// })

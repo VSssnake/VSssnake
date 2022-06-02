@@ -56,14 +56,21 @@
             <div id="score">
                 <h3>SCORE: <span id="score-count">0</span></h3>
             </div>
-            <p id="promptEl">prompt 1: on your keyboard, enter the shortcut to cut a whole line in VsCode</p>
-            <img src="../assets/snake.png" alt="a cute green snake" width="300px">
+            <p id="promptEl">enter the shortcut to cut a whole line</p>
+            <!-- <img src="../assets/snake.png" alt="a cute green snake" width="300px"> -->
+            <div id="snake-move">
+                <div class="hidden" id="box-one"></div>
+                <div class="hidden" id="box-two"></div>
+                <div class="hidden" id="box-three"></div>
+                <div class="hidden" id="box-four"></div>
+                <div class="hidden" id="box-five"></div>
+            </div>
         </div>
         <form id="form">   
             <label>
                 Username:
             </label>
-            <input type="text" name="username-input" id="username-input" />
+            <input type="text" required name="username-input" id="username-input" />
             <button id="save" class="nav">Save score</button>
         </form>
     </section>
