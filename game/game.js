@@ -1,4 +1,4 @@
-import { logout, createPlayerData } from '../fetch-utils.js';
+import { logout, createPlayerData, checkAuth } from '../fetch-utils.js';
 
 const logoutButton = document.getElementById('logout');
 // const deleteAccount = document.getElementById('delete-data');
@@ -6,16 +6,18 @@ const formEl = document.getElementById('form');
 //  -grab score-counter 
 const scoreEl = document.getElementById('score-count');
 const promptEl = document.getElementById('promptEl');
+const homeButton = document.getElementById('home');
 // const inputEl = document.getElementById('username-input');
 
 logoutButton.addEventListener('click', async () => {
     await logout();
 });
 
-// deleteAccount.addEventListener('click', async () => {
-//     await removeData();
+homeButton.addEventListener('click', () => {
+    window.location.href = '/';
+});
 
-// });
+checkAuth();
 
 
 let score = 0;
