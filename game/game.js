@@ -78,7 +78,7 @@ function startGameMac() {
         //alert user if correct
             alert('you used ⌘X to cut a line!');
         //update the state
-            score++;
+            score += 75;
             batteryLevel();
         //update the dom view
             promptEl.textContent = 'enter the shortcut to paste a whole line';
@@ -90,25 +90,25 @@ function startGameMac() {
             batteryLevel();
             promptEl.textContent = 'enter the shortcut to move to the beginning of a line';
             scoreEl.textContent = score;
-            currentState++;
+            currentState += 200;
         } else if (currentState === 3 && event.metaKey && event.code === 'ArrowLeft'){
             event.preventDefault();
             alert ('you used ⌘← to move to the beginning of a line!');
-            score++;
+            score += 225;
             batteryLevel();
             scoreEl.textContent = score;
             currentState++;
             promptEl.textContent = 'enter the shortcut to move to the end of a line';
         } else if (currentState === 4 && event.metaKey && event.code === 'ArrowRight'){
             alert ('you used the ⌘→ shortcut!');
-            score++;
+            score += 275;
             batteryLevel();
             scoreEl.textContent = score;
             currentState++;
             promptEl.textContent = 'enter the shortcut to comment out a whole line';
         } else if (currentState === 5 && event.metaKey && event.code === 'Slash'){
             alert ('you used the shortcut to comment out a line!');
-            score++;
+            score += 400;
             batteryLevel();
             scoreEl.textContent = score;
             promptEl.textContent = 'Congrats, you completed Level 1 (the only level we have!) submit info below to save your game to the scoreboard.';
@@ -124,7 +124,7 @@ function startGameWindows() {
         //alert user if correct
             alert('you used CTRL X to cut a line!');
         //update the state
-            score++;
+            score += 100;
             batteryLevel();
         //update the dom view
             promptEl.textContent = 'enter the shortcut to paste a whole line';
@@ -132,7 +132,7 @@ function startGameWindows() {
             currentState++;
         } else if (currentState === 2 && event.ctrlKey && event.code === 'KeyV'){
             alert ('you used the paste command!');
-            score++;
+            score += 150;
             batteryLevel();
             promptEl.textContent = 'enter the shortcut to move to the beginning of a line';
             scoreEl.textContent = score;
@@ -140,21 +140,21 @@ function startGameWindows() {
         } else if (currentState === 3 && event.ctrlKey && event.code === 'ArrowLeft'){
             event.preventDefault();
             alert ('you used Ctrl← to move to the beginning of a line!');
-            score++;
+            score += 225 ;
             batteryLevel();
             scoreEl.textContent = score;
             currentState++;
             promptEl.textContent = 'enter the shortcut to move to the end of a line';
         } else if (currentState === 4 && event.ctrlKey && event.code === 'ArrowRight'){
             alert ('you used the Ctrl→ shortcut!');
-            score++;
+            score += 375;
             batteryLevel();
             scoreEl.textContent = score;
             currentState++;
             promptEl.textContent = 'enter the shortcut to comment out a whole line';
         } else if (currentState === 5 && event.ctrlKey && event.code === 'Slash'){
             alert ('you used the shortcut to comment out a line!');
-            score++;
+            score += 525;
             batteryLevel();
             scoreEl.textContent = score;
             promptEl.textContent = 'Congrats, you completed Level 1 (the only level we have!) submit info below to save your game to the scoreboard.';
