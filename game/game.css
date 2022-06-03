@@ -26,6 +26,8 @@ button {
     /* height: 75vh; */
     grid-template-columns: 10fr 60fr 5fr 15fr 10fr;
     grid-template-rows: 490px 600px 10fr;
+    min-width: 1100px;
+    max-width: 1700px;
 }
 
 #welcome-blerb {
@@ -51,6 +53,10 @@ button {
     border-radius: 5px;
     margin: 20px 0 20px 20px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #shortcuts {
@@ -139,18 +145,37 @@ ul li {
 #snake-move {
     display: flex;
     flex-direction: row;
-    border: 2px solid chartreuse;
-    width: 150px;
+    /* border: 2px solid chartreuse; */
+    width: 400px;
     height: 35px;
+    border-radius: 20px;
+}
+
+#snake-move #box-six  {
+    background-color: rgb(92, 172, 12);
+
+}
+
+#snake-move #box-six p {
+    transform: translateX(65%);
 }
 
 #snake-move div {
     background-color: chartreuse;
     margin: 2px;
     height: 30px;
-    width: 30px;
+    width: 80px;
+    border-radius: 20px;
+    /* position: absolute;
+    z-index: 1; */
 }
 
 .hidden {
     display: none;
+}
+
+
+
+#eyes{
+    margin-bottom: 50px;
 }
