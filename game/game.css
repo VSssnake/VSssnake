@@ -151,6 +151,15 @@ ul li {
     border-radius: 20px;
 }
 
+#snake-move #box-six  {
+    background-color: rgb(92, 172, 12);
+
+}
+
+#snake-move #box-six p {
+    transform: translateX(65%);
+}
+
 #snake-move div {
     background-color: chartreuse;
     margin: 2px;
@@ -165,12 +174,8 @@ ul li {
     display: none;
 }
 
-/* placeholder eye{
-    position: absolute;
-    z-index: 1;
-    width: 3px;
-    height: 3px;
-    border: 50%;
-    background-color: rgb(9, 3, 3);
-} */
 
+
+#eyes{
+    margin-bottom: 50px;
+}
