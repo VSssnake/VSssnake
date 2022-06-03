@@ -49,8 +49,11 @@ formEl.addEventListener('submit', async (e) => {
 
 
 function batteryLevel() {
+    //identifies score state
     if (score === 75) {
+    //shows battery level 
         boxOne.classList.remove('hidden');
+    //plays audio for correct answer
         correctAudio.play();
     } else if (score === 225) {
         boxTwo.classList.remove('hidden');
