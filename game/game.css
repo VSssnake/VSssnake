@@ -149,18 +149,19 @@ ul li {
     display: flex;
     flex-direction: row;
     /* border: 2px solid chartreuse; */
-    width: 400px;
+    width: 480px;
     height: 35px;
     border-radius: 20px;
 }
 
 #snake-move #box-six  {
-    background-color: rgb(92, 172, 12);
-
+    background-image: linear-gradient(150deg, rgb(252, 105, 0), rgb(255, 221, 0))
 }
 
 #snake-move #box-six p {
     transform: translateX(65%);
+    margin: -15px;
+    padding: 3px;
 }
 
 #snake-move div {
