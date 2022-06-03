@@ -34,7 +34,6 @@ checkAuth();
 
 
 let score = 0;
-//checking for command cut line
 let currentState = 1;
 
 formEl.addEventListener('submit', async (e) => {
@@ -46,8 +45,8 @@ formEl.addEventListener('submit', async (e) => {
     } else {
         alert('you need to ssscore pointsss');
     }
-    // this includes a test input
 });
+
 
 function batteryLevel() {
     if (score === 75) {
@@ -67,7 +66,6 @@ function batteryLevel() {
         tadaAudio.play();
     }
 }
-console.log(score);
 
 batteryLevel();
 
@@ -77,12 +75,15 @@ function startGameMac() {
         if (currentState === 1 && event.metaKey && event.code === 'KeyX'){
         //alert user if correct
             alert('you used ⌘X to cut a line!');
-        //update the state
+        //update the score
             score += 75;
+        //increase progress
             batteryLevel();
-        //update the dom view
+        //stage prompt for next currentState
             promptEl.textContent = 'enter the shortcut to paste a whole line';
+        //reflect score view
             scoreEl.textContent = score;
+        //stage currentState for next question
             currentState++;
         } else if (currentState === 2 && event.metaKey && event.code === 'KeyV'){
             alert ('you used the paste command!');
@@ -113,20 +114,15 @@ function startGameMac() {
             scoreEl.textContent = score;
             promptEl.textContent = 'Congrats, you completed Level 1 (the only level we have!) submit info below to save your game to the scoreboard.';
         } 
-        //create brand new if state and do the same if else alert error
     });
 }
 
 function startGameWindows() {
     document.addEventListener('keydown', (event) => {
-        //verify correct answer
         if (currentState === 1 && event.ctrlKey && event.code === 'KeyX'){
-        //alert user if correct
             alert('you used CTRL X to cut a line!');
-        //update the state
             score += 75;
             batteryLevel();
-        //update the dom view
             promptEl.textContent = 'enter the shortcut to paste a whole line';
             scoreEl.textContent = score;
             currentState++;
@@ -163,7 +159,7 @@ function startGameWindows() {
     });
 }
 
-//do a click event listener for the end of the game to toggle startGame()?
+//identifies operating system user is using to determine which game loop to start
 function findOS(){
     if (navigator.userAgentData.platform === 'macOS'){
         startGameMac();
